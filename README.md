@@ -36,6 +36,8 @@
 
     ```bash
     mysql -u root -p shopping_cart < data.sql
+
+    注意：執行 data.sql 之前，請確保已經成功創建了資料庫和資料表。
     
 <br>
 
