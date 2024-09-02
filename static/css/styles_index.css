@@ -1,0 +1,122 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #565656;
+}
+.max-label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #747373;
+}
+.max-label b {
+    color: #dc3545;
+}
+
+.product-items {
+    margin: 15px 0 25px 0;
+    color: #565656;
+}
+
+.product-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.product-details {
+    padding: 10px 0 10px 0;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-country {
+    font-size: 14px;
+}
+
+.quantity-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.quantity-button:hover {
+    background-color: #e0e0e0;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    box-sizing: border-box; /* 確保内邊距和邊框包含在總高度和寬度内 */
+    cursor: auto;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.addtocart-div {
+    display: flex;
+    justify-content: end;
+}
+.add-to-cart-btn {
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    color: #565656;
+    padding: 6px 10px;
+}
+.add-to-cart-btn:hover {
+    background-color: #4493f8;
+    color: #fff;
+}
+
+.flash-messages {
+    margin: 15px 0;
+}
+
+.flash-message {
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.flash-message.success {
+    background-color: #3bbc59;
+}
+
+.flash-message.error {
+    background-color: #dc4352;
+}
+
+a {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    text-decoration: none;
+    color: #4493f8;
+}
+a:hover {
+    text-decoration: underline;
+}

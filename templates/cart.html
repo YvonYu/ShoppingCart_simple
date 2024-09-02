@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_cart.css') }}">
+</head>
+<body>
+    <div class="container">
+        <table class="cart-border">
+            <caption>Shopping Cart</caption>
+            <thead>
+                <tr>
+                    <th>商品明細</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if cart_items %}
+                    {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>NT$ {{ item.price }}</td>
+                        <td class="quantity-group">
+                            <form action="{{ url_for('update_quantity', product_id = item.product_id, action = 'minus') }}" method="post">
+                                <button type="submit" class="minus-button" {% if item.quantity<=1 %}disabled{% endif %}>-</button>
+                            </form>
+                            <span class="quantity">{{ item.quantity }}</span>
+                            <form action="{{ url_for('update_quantity', product_id = item.product_id, action = 'plus') }}" method="post">
+                                <button type="submit" class="plus-button " {% if item.quantity>=9 %}disabled{% endif %}>+</button>
+                            </form>
+                        </td>
+                        <td style="width: 40px;">
+                            <form action="{{ url_for('remove_cart_item', product_id = item.product_id) }}" method="post">
+                                <button type="submit" class="remove-button ">刪除</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr><td colspan="4">Your cart is empty.</td></tr>
+                {% endif %}
+            </tbody>
+            <!-- 顯示總計價錢 -->
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="total-price">
+                        <label class="total-label">- 總計 -</label>
+                        NT$ {{ total_price }}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="{{ url_for('clear_cart') }}" class="clear-cart-button">清空購物車</a>
+        <a href="{{ url_for('index') }}" class="back-button">回產品頁面</a>
+    </div>
+    
+
+    
+    
+</body>
+</html>

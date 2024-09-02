@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Product List</h2>
+        <label class="max-label"><b>注意：</b>同一帳號單一品項最大能購買數量為9</label>
+        <!-- 顯示 Flash 訊息 -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="product-items">
+            {% for product in products %}
+            <div class="product-item">
+                <div class="product-main">
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-price">NT$ {{ product.price }}</div>
+                </div>
+                <div class="product-details">
+                    <div class="product-country">
+                        <label>產地：{{ product.country }}</label>
+                    </div>
+                    <div class="product-quantity">
+                        <button class="quantity-button" onclick="updateQuantity(this, -1)">-</button>
+                        <input type="number" name="quantity" value="1" min="1" max="9" readonly>
+                        <button class="quantity-button" onclick="updateQuantity(this, 1)">+</button>
+                    </div>      
+                </div>
+                <div class="addtocart-div">
+                    <form action="{{ url_for('add_to_cart', product_id = product.id) }}" method="post">
+                        <input type="hidden"  class="quantity-input" value="1" name="quantity">
+                        <button type="submit" class="add-to-cart-btn">Add To Cart</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('cart') }}">View MyCart</a>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts_index.js') }}"></script>
+</body>
+</html>
