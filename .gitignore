@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# MySQL 數據庫文件
+*.ibd
+*.myd
+*.myi
+*.frm
+
+# 虛擬環境
+venv/
+env/
+
+# 配置文件
+*.env
+*.conf
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+.env
