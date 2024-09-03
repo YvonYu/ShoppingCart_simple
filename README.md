@@ -32,11 +32,18 @@
 
 2. **插入初始數據**
 
-    使用 `data.sql` 腳本來插入初始數據。執行以下指令：
+    使用 `data.sql` 腳本來插入初始數據。
+    <br>執行以下指令：
 
     ```bash
     mysql -u root -p shopping_cart < data.sql
     ```
+
+    或是執行以下指令：
+    ```bash
+    mysql --default-character-set=utf8mb4 -u root -p shopping_cart < data.sql
+    ```
+
 
     注意：執行 data.sql 之前，請確保已經成功創建了資料庫和資料表。
     
