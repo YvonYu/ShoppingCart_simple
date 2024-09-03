@@ -47,8 +47,11 @@
                 </div>
             </div>
             {% endfor %}
+            <a href="{{ url_for('cart') }}">View MyCart</a>
         </div>
-        <a href="{{ url_for('cart') }}">View MyCart</a>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2024 Yvonne Yu. All rights reserved.</p>
     </div>
     <script src="{{ url_for('static', filename='js/scripts_index.js') }}"></script>
 </body>
