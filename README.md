@@ -28,7 +28,7 @@
    使用 `schema.sql` 腳本來創建資料庫和資料表。可以通過以下指令在 MySQL 中執行：
 
    ```bash
-   mysql -u root -p shopping_cart < schema.sql
+   mysql -u root -p < schema.sql
 
 2. **插入初始數據**
 
