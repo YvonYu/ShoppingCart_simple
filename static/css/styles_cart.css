@@ -1,11 +1,12 @@
 /* static/css/styles_cart.css */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
 }
 
 .container {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 40px auto;
     padding: 10px;
 }
@@ -29,7 +30,6 @@ table caption {
     right: 10px;
     top: 55px;
     color: #4493f8;
-    border: none;
     padding: 6px 10px;
     font-size: 14px;
     text-decoration: none;
@@ -119,4 +119,13 @@ tfoot {
     padding: 6px 10px;
     font-size: 14px;
     text-decoration: none;
+}
+.footer {
+    font-size: 12px;
+    text-align: center;
+    color: #8d96a0;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
