@@ -2,8 +2,8 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 40px auto;
     padding: 20px;
     color: #565656;
 }
@@ -17,7 +17,9 @@ body {
 }
 
 .product-items {
-    margin: 15px 0 25px 0;
+    /* 相對定位，view myCart的父元素 */
+    position: relative; 
+    margin: 25px 0 25px 0;
     color: #565656;
 }
 
@@ -26,7 +28,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 15px;
-    margin: 10px 0;
+    margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .product-main {
@@ -112,11 +114,17 @@ input[type="number"] {
 
 a {
     position: absolute;
-    right: 60px;
-    top: 30px;
+    right: 0px;
+    top: -45px;
     text-decoration: none;
     color: #4493f8;
 }
 a:hover {
     text-decoration: underline;
+}
+.footer {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    color: #8d96a0;
 }
