@@ -18,6 +18,7 @@
 - `data.sql`： 用於插入初始數據的 SQL 腳本。
 - `requirements.txt`： Python 依賴項列表。
 - `README.md`： 專案說明文件。
+- `env`： 資料庫連接資訊。
 <br>
 
 ## 資料庫設置
@@ -44,13 +45,26 @@
     mysql --default-character-set=utf8mb4 -u root -p shopping_cart < data.sql
     ```
 
-
     注意：執行 data.sql 之前，請確保已經成功創建了資料庫和資料表。
     
 <br>
 
-## 安裝
-確保您已經安裝了所需的 Python 環境。使用以下命令安裝：
+## 環境設置
+1. **編輯 `.env` 文件**
+使用文本編輯器打開 `.env` 文件，並根據您的環境設置正確的值。以下是 `.env` 文件的格式和所需變數：
+
+```env
+# .env 文件
+SECRET_KEY=mysecretkey               # 請替換為您的 Flask 密鑰
+DB_HOST=127.0.0.1                    # 資料庫主機，通常為 localhost 或 IP 地址
+DB_NAME=shopping_cart                # 資料庫名稱
+DB_USER=root                         # 資料庫用戶名
+DB_PASSWORD=12345@db                 # 資料庫密碼
+```
+請填入您正確的資料庫主機、名稱、用戶名和密碼。這些值應該與您的 MySQL 伺服器配置匹配。
+
+2. **Python 套件**
+確保您已經安裝了所需的 Python 套件。使用以下命令安裝：
 
 ```bash
 pip install -r requirements.txt
