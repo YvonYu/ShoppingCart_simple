@@ -24,7 +24,7 @@
 ## 環境設置
 1. **安裝 Python**
     
-    確保您的系統上已安裝 Python。如果尚未安裝，請從 [Python 官方網站]() 下載並安裝，建議使用 Python 3.7 或更高版本。
+    確保您的系統上已安裝 Python。如果尚未安裝，請從 [Python 官方網站](https://www.python.org/downloads/) 下載並安裝，建議使用 Python 3.7 或更高版本。
 
     安裝完成後，您可以使用以下命令來檢查 Python 是否已安裝：
 
@@ -34,8 +34,10 @@
 
 2. **安裝 MySQL**
 
-    確保您的系統上已安裝 MySQL。如果尚未安裝，請從 [MySQL 官方網站]() 下載並安裝，並需記下您的 MySQL 用戶的密碼。
+    確保您的系統上已安裝 MySQL。如果尚未安裝，請從 [MySQL 官方網站](https://dev.mysql.com/downloads/) 下載並安裝，並需記下您 MySQL 用戶的密碼。
+
     安裝完成後，您可以使用以下命令來檢查 MySQL 是否正常運行：
+
     ```
     mysql --version
     ```
