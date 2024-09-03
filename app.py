@@ -8,7 +8,8 @@ import os
 
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')  # 必須設定 secret_key 才能使用 Flash
-
+# 載入 .env 檔案
+load_dotenv()
 db_config = {
     'host': os.getenv('DB_HOST'),
     'database': os.getenv('DB_NAME'),
