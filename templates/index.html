@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="{{ url_for('cart') }}">View MyCart</a>
         <h2>Product List</h2>
         <label class="max-label"><b>注意：</b>同一帳號單一品項最大能購買數量為9</label>
         <!-- 顯示 Flash 訊息 -->
@@ -47,7 +48,7 @@
                 </div>
             </div>
             {% endfor %}
-            <a href="{{ url_for('cart') }}">View MyCart</a>
+
         </div>
     </div>
     <div class="footer">

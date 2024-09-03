@@ -114,8 +114,8 @@ input[type="number"] {
 
 a {
     position: absolute;
-    right: 0px;
-    top: -45px;
+    right: 20%;
+    transform: translate(50%, 50%);
     text-decoration: none;
     color: #4493f8;
 }
