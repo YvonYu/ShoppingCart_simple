@@ -14,11 +14,9 @@ venv/
 env/
 
 # 配置文件
-*.env
+# *.env
 *.conf
 
 # OS-specific files
 .DS_Store
 Thumbs.db
-
-.env
