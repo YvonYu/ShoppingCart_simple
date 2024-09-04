@@ -1,10 +1,15 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    /* 設定最小高度為視窗的高度，確保頁面高度至少為一個視窗 */
+    min-height: 100vh;
+    margin-bottom: -50px;
 }
 .container {
-    width: 70%;
-    margin: 40px auto;
-    padding: 20px;
+    position: relative;
+    width: 50%;
+    margin: 0px auto 40px auto;
+    padding: 70px 20px 20px 20px;
     color: #565656;
 }
 .max-label {
@@ -115,7 +120,7 @@ input[type="number"] {
 a {
     position: absolute;
     right: 20%;
-    transform: translate(50%, 50%);
+    transform: translate(100%, 100%);
     text-decoration: none;
     color: #4493f8;
 }
@@ -125,6 +130,10 @@ a:hover {
 .footer {
     font-size: 12px;
     text-align: center;
-    padding: 5px;
     color: #8d96a0;
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
