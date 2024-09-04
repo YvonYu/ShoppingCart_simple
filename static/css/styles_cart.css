@@ -6,8 +6,8 @@ body {
 
 .container {
     position: relative;
-    width: 70%;
-    margin: 40px auto;
+    width: 50%;
+    margin: 10% auto;
     padding: 10px;
 }
 .cart-border {
@@ -22,13 +22,13 @@ table caption {
     color: var(--default_dark, #565656);
     font-size: 18px;
     font-weight: 400;
-    margin: 40px auto 15px auto;
+    margin: 40px auto 25px auto;
     text-align: left;
 }
 .clear-cart-button {
     position: absolute;
     right: 10px;
-    top: 55px;
+    top: 45px;
     color: #4493f8;
     padding: 6px 10px;
     font-size: 14px;
