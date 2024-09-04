@@ -7,7 +7,7 @@ body {
 .container {
     position: relative;
     width: 50%;
-    margin: 10% auto;
+    margin: 5% auto 10% auto;
     padding: 10px;
 }
 .cart-border {
